@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "yarn build && gh-pages -d dist"
+    "deploy": "yarn build && gh-pages -d dist/useful-angular-snippets"
   },
   "private": true,
   "dependencies": {
