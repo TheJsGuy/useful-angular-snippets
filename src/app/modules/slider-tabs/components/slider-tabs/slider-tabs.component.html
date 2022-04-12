@@ -1,0 +1,39 @@
+<ul>
+    <li *ngFor="let tab of tabs; index as i" (click)="selectTab(i)" [ngClass]="{'active': i === activeIndex}">{{tab}}
+    </li>
+</ul>
+
+<div class="noscroll-x">
+    <div class="tab-content-wrapper">
+        <div *ngFor="let tab of tabs; index as i" class="tab-content"
+            [ngClass]="{'active': i === activeIndex, 'before-active': i < activeIndex, 'after-active': i > activeIndex}">
+            Tab Content {{tab}} <br />
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sint ullam expedita accusantium adipisci
+            sunt.
+            Animi neque ducimus illo. Sequi fuga asperiores, cum enim quas qui. Enim velit quibusdam numquam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, molestias illo consectetur accusantium cum
+            nam
+            tenetur similique! Blanditiis, aspernatur odit ducimus, fugit non unde aliquid sequi, nulla deserunt magnam
+            exercitationem?
+            <img
+                src="https://images.pexels.com/photos/11154051/pexels-photo-11154051.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nobis asperiores veritatis ducimus quae saepe
+            magnam aliquam, possimus pariatur omnis eos impedit rerum consequatur ea, illo nulla alias nostrum
+            voluptatibus!
+        </div>
+    </div>
+</div>
+
+<style>
+    .active {
+        transform: translateX(0);
+    }
+
+    .before-active {
+        transform: translateX(-100%);
+    }
+
+    .after-active {
+        transform: translateX(100%);
+    }
+</style>
