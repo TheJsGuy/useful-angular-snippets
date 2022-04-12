@@ -48,7 +48,10 @@ ul {
         position: absolute;
         left: 0px;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 150ms;
-        transition-duration: 150ms;
+        transition-duration: 750ms;
+    }
+
+    .inactive {
+        display: none;
     }
 }

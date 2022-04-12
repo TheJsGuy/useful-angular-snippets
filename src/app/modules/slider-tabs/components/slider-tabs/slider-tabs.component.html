@@ -4,9 +4,9 @@
 </ul>
 
 <div class="noscroll-x">
-    <div class="tab-content-wrapper">
+    <div class="tab-content-wrapper" #swipeArea>
         <div *ngFor="let tab of tabs; index as i" class="tab-content"
-            [ngClass]="{'active': i === activeIndex, 'before-active': i < activeIndex, 'after-active': i > activeIndex}">
+            [ngClass]="{'active-tab-content': i === activeIndex, 'before-active': i === activeIndex-1, 'after-active': i === activeIndex + 1, 'inactive': i > (activeIndex + 1) || i < (activeIndex - 1)}">
             Tab Content {{tab}} <br />
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sint ullam expedita accusantium adipisci
             sunt.
@@ -15,8 +15,9 @@
             nam
             tenetur similique! Blanditiis, aspernatur odit ducimus, fugit non unde aliquid sequi, nulla deserunt magnam
             exercitationem?
-            <img
+            <img height="480"
                 src="https://images.pexels.com/photos/11154051/pexels-photo-11154051.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+            <br />
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nobis asperiores veritatis ducimus quae saepe
             magnam aliquam, possimus pariatur omnis eos impedit rerum consequatur ea, illo nulla alias nostrum
             voluptatibus!
@@ -37,3 +38,5 @@
         transform: translateX(100%);
     }
 </style>
+
+<div #dynamicStyle></div>
